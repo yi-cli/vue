@@ -8,7 +8,7 @@
   },
   "pre-commit": {
     "run": [
-      "test"
+      "lint"
     ]
   },
   "dependencies": {
