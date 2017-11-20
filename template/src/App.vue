@@ -10,7 +10,7 @@ export default {
     return {}
   },
   created() {
-
+    console.log('hello vue.js ～～～')
   },
   methods: {
 

@@ -20,6 +20,9 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js project'
     }
+  },
+  created() {
+    this.$store.dispatch('info', 'hello world')
   }
 }
 </script>
