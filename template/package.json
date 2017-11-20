@@ -6,9 +6,11 @@
     "lint": "eslint --fix ./src/**/*.js ./src/**/*.vue",
     "test": "karma start test/unit/karma.conf.js --single-run"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "pre-commit": {
+    "run": [
+      "test"
+    ]
+  },
   "dependencies": {
     "axios": "^0.17.0",
     "vue": "^2.5.3",
