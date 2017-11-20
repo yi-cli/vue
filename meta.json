@@ -1,0 +1,47 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "label": "Project description",
+      "default": "A Vue.js simple project"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author"
+    },
+    "license": {
+      "type": "string",
+      "label": "License",
+      "default": "MIT"
+    },
+    "css": {
+      "type": "list",
+      "message": "Select CSS preprocessor",
+      "choices": ["sass", "less", "css"],
+    },
+    "lint": {
+      "type": "confirm",
+      "message": "Use ESLint to lint your code?",
+      "default": true
+    },
+    "unit": {
+      "type": "confirm",
+      "message": "Setup unit tests with Karma + Mocha?"
+    },
+    "e2e": {
+      "type": "confirm",
+      "message": "Setup e2e tests with Nightwatch?"
+    }
+  },
+  "filters": {
+    ".eslintrc.json": "lint",
+    "test/unit/**/*": "unit",
+  },
+  "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
+}
