@@ -10,6 +10,6 @@ export default new Vuex.Store({
   modules: {
     index
   },
-  actions ,
-  strict: debug
+  actions,
+  // strict: debug
 })
