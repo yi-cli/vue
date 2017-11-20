@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
@@ -33,7 +34,12 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: ['vue-loader']
+        use: [{
+          loader: 'vue-loader',
+          options: {
+            postcss: [autoprefixer({browsers: ['> 1%', 'ie >= 9', 'iOS >= 6', 'Android >= 2.1']})]
+          }
+        }]
       },
       {
         test: /\.css$/,
