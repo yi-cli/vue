@@ -5,6 +5,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 ul,ol,li { list-style:none; }
+a{text-decoration: none;}
 a:focus{outline-style:none;}
 a,button{cursor:pointer;}
 table{border-collapse:collapse;border-spacing:0;}
