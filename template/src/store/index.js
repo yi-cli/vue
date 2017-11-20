@@ -11,5 +11,5 @@ export default new Vuex.Store({
     index
   },
   actions,
-  // strict: debug
+  strict: debug
 })
