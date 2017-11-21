@@ -33,7 +33,7 @@ export default {
   }
 }
 </script>
-<style {{#sass}} lang="scss"{{/sass} {{#less}} lang="less"{{/less} scoped>
+<style {{#sass}} lang="scss"{{/sass}} {{#less}} lang="less"{{/less}} scoped>
 .hello {
   padding-top: 80px;
   text-align: center;
