@@ -26,7 +26,8 @@ export default {
   },
   methods: {
     async getMsg() {
-      let response = await this.$http.get(`users/yi-cli/repos`)
+      let params = {id: 1, name: 'yuyi', age: 12}
+      let response = await this.$http.get(`users/yi-cli/repos`, {params})
       console.log(response)
     }
   }
