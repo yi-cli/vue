@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     async getMsg() {
-      let response = await this.$http.get(`https://api.github.com/users/yi-cli/repos`)
+      let response = await this.$http.get(`users/yi-cli/repos`)
       console.log(response)
     }
   }

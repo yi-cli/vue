@@ -2,6 +2,7 @@
 import axios from 'axios'
 
 const Axios = axios.create({
+  baseURL: 'https://api.github.com/',
   // This is only applicable for request methods 'PUT', 'POST', and 'PATCH'
   transformRequest: [(data, headers) => {
     // Do whatever you want to transform the data
