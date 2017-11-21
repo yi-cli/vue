@@ -21,7 +21,8 @@ const Axios = axios.create({
   //   "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
   // },
   timeout: 5000,
-  withCredentials: true
+  // http header cookies
+  // withCredentials: true
 })
 // http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 

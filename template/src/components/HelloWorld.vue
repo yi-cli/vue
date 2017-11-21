@@ -7,7 +7,7 @@
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
       <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
       <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      </br>
+      <br/>
       <li><a href="https://yi-cli.github.io/yi-cli/" target="_blank">Yi-Cli</a></li>
       <li><a href="https://github.com/yi-cli" target="_blank">This Template</a></li>
     </ul>
@@ -23,6 +23,12 @@ export default {
   },
   created() {
     this.$store.dispatch('info', 'hello world')
+  },
+  methods: {
+    async getMsg() {
+      let response = await this.$http.get(`https://api.github.com/users/yi-cli/repos`)
+      console.log(response)
+    }
   }
 }
 </script>
