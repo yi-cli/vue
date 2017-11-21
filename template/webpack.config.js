@@ -16,6 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
+      {{#lint}}
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -27,6 +28,7 @@ module.exports = {
           }
         }
       },
+      {{/lint}}
       {
         test: /\.js$/,
         use: ['babel-loader'],
@@ -45,7 +47,7 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+          use: ['css-loader', {{#sass}}'sass-loader'{{#sass}}{{#less}}'less-loader'{{/less}}]
         })
       },
       {
