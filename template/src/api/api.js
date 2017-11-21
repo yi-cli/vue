@@ -21,18 +21,13 @@ const Axios = axios.create({
   //   "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
   // },
   timeout: 5000,
-  // http header cookies
+  // This will set http header cookies
   // withCredentials: true
 })
 // http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 
-const api = {
-  get: (url, data) => Axios.get(url, data),
-  post: (url, data) => Axios.post(url, data)
-}
-
 export default {
   install: function(Vue, Option) {
-    Object.defineProperty(Vue.prototype, '$http', { value: api })
+    Object.defineProperty(Vue.prototype, '$http', { value: Axios })
   }
 }
