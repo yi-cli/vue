@@ -3,8 +3,8 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin')
 
 module.exports = {
