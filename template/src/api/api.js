@@ -13,9 +13,9 @@ const Axios = axios.create({
     return data
   }],
   transformResponse: [(res) => {
-    // if(res.data && res.data.code !== 0) {
-    //   console.log(res)
-    // }
+    if(res.data && res.data.code !== 0) {
+      console.log(res)
+    }
 
     return res
   }],
