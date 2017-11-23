@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const HtmlwebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
@@ -117,11 +118,9 @@ if(process.env.NODE_ENV === 'dev') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       sourceMap: true,
-      compress: {
-        warnings: false
-      }
+      parallel: true
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
