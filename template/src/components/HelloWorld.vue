@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h2>{{ msg }}</h2>
+    <h2 v-text="msg"></h2>
     <img src="../assets/images/yuyi.png" alt="">
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
