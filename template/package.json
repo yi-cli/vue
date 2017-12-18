@@ -8,8 +8,7 @@
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress",
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dll": "webpack --config ./webpack.dll.config.js --progress",
-    {{#lint}}
+    "dll": "webpack --config ./webpack.dll.config.js --progress"{{#lint}},
     "lint": "eslint --fix ./src/**/*.js ./src/**/*.vue"
     {{/lint}}
   },
